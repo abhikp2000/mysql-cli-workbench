@@ -119,20 +119,8 @@ for i in range(n):
     temp=Column(name,datatype,length,[primary,null,inc])
     column.append(temp)
     
-a=Workbench('alumini_network')
+a=Workbench('dbName')
 a.creatTable(table,column)
 a.showTables()
 a.selectFromTable(table,'attribute')
 a.deleteRecord(table,'where','key')
-
-"""
-def connectToDB(dbname,password):
-    user='root'
-    host='localhost'
-    password=password
-    database=dbname
-    print(password)
-    conn=mysql.connector.connect(user=user,host=host,password=password,database=database)
-    return conn
-
-"""
